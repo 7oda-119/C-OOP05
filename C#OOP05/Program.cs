@@ -62,6 +62,16 @@ internal class Program
         //Console.WriteLine(originalStandard.Description);   // Output not affected 
         #endregion
 
+        #region Shallow copy
+        //// Address converted to a class
+        ////Demonstrate the Shallow Copy concept
+        //Shipment original = new StandardShipment("S001", "Books", 5, 50, new DeliveryAddress("Cairo", "Tahrir", 10));
+        //Shipment shallowCopy = original.ShallowCopy();
+        //Console.WriteLine(ReferenceEquals(original, shallowCopy));   // False
+        //Console.WriteLine(ReferenceEquals(original.Destination, shallowCopy.Destination));   // True
+        //shallowCopy.Destination.city = "Alexandria";   // Modifying the copy
+        //Console.WriteLine(original.Destination.city);   // Output affected
+        #endregion
         #endregion
         #endregion
     }

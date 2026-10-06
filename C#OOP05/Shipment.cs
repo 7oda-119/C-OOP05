@@ -120,5 +120,12 @@ internal abstract class Shipment
     #region Object Copying
     public abstract Shipment CopyShipment();
     #endregion
+
+    #region Shallow Copy
+    public Shipment ShallowCopy()
+    {
+        return (Shipment)this.MemberwiseClone();
+    } 
+    #endregion
 }
 
