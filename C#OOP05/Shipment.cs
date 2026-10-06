@@ -125,7 +125,16 @@ internal abstract class Shipment
     public Shipment ShallowCopy()
     {
         return (Shipment)this.MemberwiseClone();
-    } 
+    }
+    #endregion
+
+    #region Deep Copy
+    public Shipment DeepCopy()
+    {
+        Shipment copy = ShallowCopy();
+        copy.Destination = Destination is null ? new DeliveryAddress() : new DeliveryAddress(Destination.city, Destination.street, Destination.buildingNumber);
+        return copy;
+    }
     #endregion
 }
 

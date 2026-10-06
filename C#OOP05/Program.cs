@@ -72,6 +72,16 @@ internal class Program
         //shallowCopy.Destination.city = "Alexandria";   // Modifying the copy
         //Console.WriteLine(original.Destination.city);   // Output affected
         #endregion
+
+        #region Deep Copy
+        ////Demonstrate the Deep Copy concept
+        //Shipment original = new StandardShipment("S001", "Books", 5, 50, new DeliveryAddress("Cairo", "Tahrir", 10));
+        //Shipment deepCopy = original.DeepCopy();
+        //Console.WriteLine(ReferenceEquals(original, deepCopy));   // False
+        //Console.WriteLine(ReferenceEquals(original.Destination, deepCopy.Destination));   // False
+        //deepCopy.Destination.city = "Alexandria";   // Modifying the copy
+        //Console.WriteLine(original.Destination.city);   // Output not affected
+        #endregion
         #endregion
         #endregion
     }

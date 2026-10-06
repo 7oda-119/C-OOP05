@@ -6,6 +6,10 @@ internal class DeliveryAddress
     public string street;
     public int buildingNumber;
 
+    public DeliveryAddress()
+    {
+        
+    }
     public DeliveryAddress(string city, string street, int buildingNumber)
     {
         this.city = city;
