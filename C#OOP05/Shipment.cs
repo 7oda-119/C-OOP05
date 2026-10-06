@@ -116,5 +116,9 @@ internal abstract class Shipment
         Weight = weight + packingWeigh;
     }
     #endregion
+
+    #region Object Copying
+    public abstract Shipment CopyShipment();
+    #endregion
 }
 

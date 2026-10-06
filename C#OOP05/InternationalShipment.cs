@@ -57,4 +57,9 @@ internal class InternationalShipment : Shipment, ITrackable, IInsurable
     {
         return EstimatedCost * 0.12m;
     }
+
+    public override Shipment CopyShipment()
+    {
+        return new InternationalShipment(TrackingCode, Description, Weight, DeliveryFee, Destination, DestinationCountry, CustomsFee);  
+    }
 }

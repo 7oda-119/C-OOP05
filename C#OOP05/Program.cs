@@ -41,6 +41,28 @@ internal class Program
          */
         #endregion
         #endregion
+
+        #region Practical Questions
+
+        #region Object Copying
+        // Demonstrate the difference between assigning one object variable to another and creating an actual copy.
+        //Shipment originalStandard = new StandardShipment("S001", "Books", 5, 50, new DeliveryAddress("Cairo", "Tahrir", 10));
+
+        //// Assigning reference
+        //Shipment copyReferenceStandard = originalStandard;   // Assigning reference
+
+        //Console.WriteLine(ReferenceEquals(originalStandard, copyReferenceStandard));  //True
+        //copyReferenceStandard.Description = "Electronics";   // Modifying the copy
+        //Console.WriteLine(originalStandard.Description);   // Output affected
+
+        ////Actual copy
+        //Shipment copyActualStandard = originalStandard.CopyShipment();   // Creating an actual copy
+        //Console.WriteLine(ReferenceEquals(originalStandard, copyActualStandard));   // False
+        //copyActualStandard.Description = "Clothing";    // Modifying the copy
+        //Console.WriteLine(originalStandard.Description);   // Output not affected 
+        #endregion
+
+        #endregion
         #endregion
     }
 }

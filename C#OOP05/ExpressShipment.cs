@@ -41,4 +41,11 @@ internal class ExpressShipment : Shipment, ITrackable, IInsurable
     {
         return EstimatedCost * 0.08m;
     }
+
+    #region Object Copying
+    public override Shipment CopyShipment()
+    {
+        return new ExpressShipment(TrackingCode, Description, Weight, DeliveryFee, Destination, ExtraFee); 
+    }
+    #endregion
 }

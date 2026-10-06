@@ -22,4 +22,11 @@ internal sealed class CompletedShipment : Shipment
         Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
         Console.WriteLine($"EstimatedCost: {EstimatedCost}");
     }
+
+    #region Object Copying
+    public override Shipment CopyShipment()
+    {
+        return new CompletedShipment(TrackingCode, Description, Weight, DeliveryFee, Destination);  // Destination not => new Address(city, street, number) beacause Address is still struct and it is copied by value.
+    }
+    #endregion
 }
